@@ -1,16 +1,8 @@
 import { useMemo, useState } from 'react';
 import { EXPEDITIONS, PAYMENT_METHODS, TAX_RATE } from '../data/products';
 
-/**
- * Centralizes all cart-related state & business logic:
- * - items in cart (with quantity, clamped to stock)
- * - selected expedition & payment method
- * - derived totals (subtotal, tax, shipping, grand total)
- * - submit simulation (loading -> success)
- *
- * Keeping this in a hook keeps presentation components "dumb":
- * they only receive data + callbacks via props.
- */
+// Semua state & logic keranjang dikumpulin di sini (qty, ekspedisi, metode bayar,
+// total, submit) biar komponen tinggal terima data + callback lewat props.
 export function useCart(products) {
   const [quantities, setQuantities] = useState({});
   const [expeditionId, setExpeditionId] = useState(EXPEDITIONS[0].id);

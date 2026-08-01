@@ -1,7 +1,4 @@
-/**
- * Mock data katalog produk Head Office.
- * Di implementasi nyata, data ini akan datang dari API.
- */
+// Mock data katalog produk HO. Nanti diganti fetch dari API kalau udah connect backend.
 export const CATEGORIES = ['Semua', 'Modul', 'Perlengkapan', 'Media Belajar'];
 
 export const PRODUCTS = [
